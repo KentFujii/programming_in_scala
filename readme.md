@@ -1,16 +1,8 @@
-docker pull hseeberger/scala-sbt
-docker run -it --rm hseeberger/scala-sbt
-
-## 設計
-
-`sbt new scala/scala-seed.g8`
-
-ベースディレクトリ/
-  各プロジェクトがそれぞれ用意される
-project/
-  設定ファイルを置くディレクトリ
-target/
-  コンパイルするバイナリを置くディレクトリ
+```
+./run.sh
+cd [a directory you need]
+sbt
+```
 
 ## memo
 
