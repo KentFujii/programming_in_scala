@@ -1,9 +1,10 @@
-package field
+package constructor
 
 class Rational(n: Int, d: Int) {
   require(d != 0)
   val numer: Int = n
   val denom: Int = d
+  def this(n: Int) = this(n, 1)
   override def toString = numer + "/" + denom
   def add(that: Rational): Rational = {
     new Rational(
@@ -14,11 +15,6 @@ class Rational(n: Int, d: Int) {
 }
 
 object Rational extends App {
-  val oneHalf = new Rational(1, 2)
-  println(oneHalf)
-
-  val twoThirds = new Rational(2, 3)
-  println(twoThirds)
-
-  println(oneHalf.add(twoThirds))
+  val y = new Rational(3)
+  println(y)
 }
