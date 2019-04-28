@@ -1,4 +1,4 @@
-package gcd_loop
+package while_loop
 
 object GcdLoop extends App {
   def gcdLoop(x: Long, y: Long): Long = {
