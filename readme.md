@@ -1,7 +1,5 @@
 ```
 ./run.sh
-cd [a directory you need]
-sbt
 ```
 
 ## memo
