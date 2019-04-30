@@ -1,4 +1,4 @@
-package element
+package spiral
 import Element.elem
 
 object Spiral {
