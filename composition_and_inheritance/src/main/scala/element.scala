@@ -1,5 +1,4 @@
 package element
-
 import Element.elem
 
 abstract class Element {

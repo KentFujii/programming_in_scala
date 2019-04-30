@@ -1,5 +1,4 @@
 package element
-
 import Element.elem
 
 object Spiral {
