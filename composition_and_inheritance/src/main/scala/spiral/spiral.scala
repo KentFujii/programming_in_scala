@@ -1,16 +1,15 @@
 package spiral
-import Element.elem
 
 object Spiral {
-  val space = elem(" ")
-  val corner = elem("+")
+  val space = Element.elem(" ")
+  val corner = Element.elem("+")
   def spiral(nEdges: Int, direction: Int): Element = {
     if (nEdges == 1)
-      elem("+")
+      Element.elem("+")
     else {
       val sp = spiral(nEdges - 1, (direction + 3) % 4)
-      def verticalBar = elem('|', 1, sp.height)
-      def horizontalBar = elem('-', sp.width, 1)
+      def verticalBar = Element.elem('|', 1, sp.height)
+      def horizontalBar = Element.elem('-', sp.width, 1)
       if (direction == 0)
         (corner beside horizontalBar) above (sp beside space)
       else if (direction == 1)

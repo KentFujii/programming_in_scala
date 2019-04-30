@@ -1,5 +1,4 @@
 package spiral
-import Element.elem
 
 abstract class Element {
   def contents:  Array[String]
@@ -8,28 +7,28 @@ abstract class Element {
   def above(that: Element): Element = {
     val this1 = this widen that.width
     val that1 = that widen this.width
-    elem(this1.contents ++ that1.contents)
+    Element.elem(this1.contents ++ that1.contents)
   }
   def beside(that: Element): Element = {
     val this1 = this heighten that.height
     val that1 = that heighten this.height
-    elem(
+    Element.elem(
       for ((line1, line2) <- this1.contents zip that1.contents)
       yield line1 + line2)
   }
   def widen(w: Int): Element = {
     if (w <= width) this
     else {
-      val left = elem(' ', (w - width) / 2, height)
-      val right = elem(' ', w - width - left.width, height)
+      val left = Element.elem(' ', (w - width) / 2, height)
+      val right = Element.elem(' ', w - width - left.width, height)
       left beside this beside right
     }
   }
   def heighten(h: Int): Element = {
     if (h <= height) this
     else {
-      val top = elem(' ', width, (h - height) / 2)
-      val bot = elem(' ', width, h - height - top.height)
+      val top = Element.elem(' ', width, (h - height) / 2)
+      val bot = Element.elem(' ', width, h - height - top.height)
       top above this above bot
     }
   }
