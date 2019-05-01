@@ -11,7 +11,6 @@
 - [x] Functions and Closures
 - [x] Control Abstraction
 - [x] Composition and Inheritance
-- [ ] Scala's Hierarchy
 - [ ] Traits
 - [ ] Packages and Imports
 - [ ] Assertions and Tests
