@@ -5,15 +5,12 @@
 - [x] First Steps in Scala
 - [x] Next Steps in Scala
 - [x] Classes and Objects
-- [x] Basic Types and Operations
 - [x] Functional Objects
 - [x] Built-in Control Structures
 - [x] Functions and Closures
 - [x] Control Abstraction
 - [x] Composition and Inheritance
-- [ ] Traits
-- [ ] Packages and Imports
-- [ ] Assertions and Tests
+- [x] Traits
 - [ ] Case Classes and Pattern Matching
 - [ ] Working with Lists
 - [ ] Working with Other Collections
