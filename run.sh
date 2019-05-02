@@ -5,7 +5,13 @@ cd `dirname $0`
 PROJECT_LIST=`ls -d */`
 select PROJECT in $PROJECT_LIST exit
 do
-  if [ $PROJECT = "exit" ]; then
+  if [ "$PROJECT" == "" ]
+  then
+    echo "Unexpected input detected."
+    exit
+  elif [ "$PROJECT" == "exit" ]
+  then
+    echo "exit."
     exit
   fi
   break

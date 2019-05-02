@@ -1,5 +1,5 @@
 package pattern_guard
-import case_classes.{Expr, BinOp, Number, Var}
+import case_classes.{Expr, Var, Number, UnOp, BinOp}
 
 object PatternGuard extends App {
   def simplifyAdd(e: Expr) = e match {
