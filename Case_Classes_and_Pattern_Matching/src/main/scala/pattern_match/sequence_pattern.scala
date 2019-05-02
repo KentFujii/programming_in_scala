@@ -1,4 +1,5 @@
-package case_classes_and_pattern_matching
+package pattern_match
+import case_classes.{Expr, Var, Number, UnOp, BinOp}
 
 object SequencePattern extends App {
   val list = List(0, 1, 2)

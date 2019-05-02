@@ -1,4 +1,5 @@
-package case_classes_and_pattern_matching
+package pattern_match
+import case_classes.{Expr, Var, Number, UnOp, BinOp}
 
 object VariableBindingPattern  extends App {
   val expr = UnOp("abs", UnOp("abs", Number(0)))

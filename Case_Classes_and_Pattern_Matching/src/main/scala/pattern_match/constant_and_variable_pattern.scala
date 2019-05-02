@@ -1,4 +1,5 @@
-package case_classes_and_pattern_matching
+package pattern_match
+import case_classes.{Expr, Var, Number, UnOp, BinOp}
 import math.{E, Pi}
 
 object ConstantAndVariablePattern extends App {
@@ -20,16 +21,11 @@ object ConstantAndVariablePattern extends App {
     case 0 => println("zero")
     case somethingElse => println("not zero: " + somethingElse)
   }
-
   E match {
     case Pi => println("strange math? Pi = " + Pi)
     case _ => println("OK")
   }
   val pi = Pi
-  E match {
-    case pi => println("strange math? Pi = " + Pi)
-    case _ => println("OK")
-  }
   E match {
     case `pi` => println("strange math? Pi = " + Pi)
     case _ => println("OK")

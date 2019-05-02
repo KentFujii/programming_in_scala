@@ -1,4 +1,5 @@
 package case_classes_and_pattern_matching
+import case_classes.{Expr, Var, Number, UnOp, BinOp}
 import math.{E, Pi}
 
 object Patterns extends App {

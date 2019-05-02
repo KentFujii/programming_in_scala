@@ -1,4 +1,5 @@
-package case_classes_and_pattern_matching
+package pattern_match
+import case_classes.{Expr, Var, Number, UnOp, BinOp}
 
 object TuplePattern extends App {
   def tupleDemo(expr: Any) = expr match {

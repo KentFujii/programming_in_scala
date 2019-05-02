@@ -1,4 +1,4 @@
-package case_classes_and_pattern_matching
+package case_classes
 
 sealed abstract class Expr
 case class Var(name: String) extends Expr

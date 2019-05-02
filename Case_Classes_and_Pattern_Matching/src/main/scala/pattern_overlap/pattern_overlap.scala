@@ -1,4 +1,4 @@
-package case_classes_and_pattern_matching
+package pattern_overlap
 
 object PatternOverlap extends App {
   // def simplifyAll(expr: Expr): Expr = expr match {
