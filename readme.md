@@ -32,4 +32,6 @@
 
 ## memo
 
+https://github.com/deanwampler/prog-scala-2nd-ed-code-examples
+https://github.com/vishallama/programming-in-scala-3rd-ed
 https://booksites.artima.com/programming_in_scala_3ed/examples/
