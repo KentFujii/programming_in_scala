@@ -11,7 +11,7 @@
 - [x] Control Abstraction
 - [x] Composition and Inheritance
 - [x] Traits
-- [ ] Case Classes and Pattern Matching
+- [x] Case Classes and Pattern Matching
 - [ ] Working with Lists
 - [ ] Working with Other Collections
 - [ ] Mutable Objects
