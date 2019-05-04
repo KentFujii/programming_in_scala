@@ -7,10 +7,7 @@ class SlowAppendQueue[T](elems: List[T]) {
 }
 
 object Queues1 extends App {
-  // val q = new SlowAppendQueue(Nil) enqueue 1 enqueue 2
-  val q = new SlowAppendQueue(Nil)
-  val q1 = q enqueue 1
-  // q.enqueue(2)
+  val q = new SlowAppendQueue(Nil) enqueue 1 enqueue 2
   println(q.head)
-  println(q.tail)
+  println(q.tail.head)
 }

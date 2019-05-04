@@ -9,5 +9,5 @@ class SlowHeadQueue[T](smele: List[T]) {
 object Queues2 extends App {
   val q = new SlowHeadQueue(Nil) enqueue 1 enqueue 2
   println(q.head)
-  println(q.tail)
+  println(q.tail.head)
 }
