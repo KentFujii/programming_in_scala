@@ -12,10 +12,7 @@
 - [x] Composition and Inheritance
 - [x] Traits
 - [x] Case Classes and Pattern Matching
-- [ ] Working with Lists
-- [ ] Working with Other Collections
-- [ ] Mutable Objects
-- [ ] Type Parameterization
+- [x] Type Parameterization
 - [ ] Abstract Members
 - [ ] Implicit Conversions and Parameters
 - [ ] Implementing Lists
