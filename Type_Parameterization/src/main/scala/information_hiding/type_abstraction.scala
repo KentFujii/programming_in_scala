@@ -1,14 +1,14 @@
 package information_hiding
 
-trait Queue5[T] {
+trait TypeAbstractionQueue[T] {
   def head: T
-  def tail: Queue5[T]
-  def enqueue(x: T): Queue5[T]
+  def tail: TypeAbstractionQueue[T]
+  def enqueue(x: T): TypeAbstractionQueue[T]
 }
 
-object Queue5 {
-  def apply[T](xs: T*): Queue5[T] = new QueueImpl[T](xs.toList, Nil)
-  private class QueueImpl[T](private val leading: List[T], private val trailing: List[T]) extends Queue5[T] {
+object TypeAbstractionQueue {
+  def apply[T](xs: T*): TypeAbstractionQueue[T] = new QueueImpl[T](xs.toList, Nil)
+  private class QueueImpl[T](private val leading: List[T], private val trailing: List[T]) extends TypeAbstractionQueue[T] {
     def mirror = {
       if (leading.isEmpty) new QueueImpl(trailing.reverse, Nil)
       else this
@@ -23,10 +23,16 @@ object Queue5 {
   }
 }
 
-object TypeAbstraction extends App {
-  val q = Queue5[Int]() enqueue 1 enqueue 2
-  println(q)
-  println(q.head)
-  println(q.tail)
-  println(q.tail.head)
+object TypeAbstractionQueueOps extends App {
+  val q1 = TypeAbstractionQueue(1, 2, 3)
+  val q2 = q1.enqueue(4)
+
+  println(q1)
+  println(q2)
+
+  println(q1.head)
+  println(q2.head)
+
+  println(q1.tail)
+  println(q2.tail)
 }

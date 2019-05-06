@@ -17,7 +17,6 @@ class Queue[+T] private (private[this] var leading: List[T], private[this] var t
     mirror()
     new Queue(leading.tail, trailing)
   }
-
   def enqueue[U >: T](x: U) = new Queue[U](leading, x :: trailing)
   override def toString = leading ::: trailing.reverse mkString ("Queue(", ", ", ")")
 }
@@ -25,7 +24,6 @@ class Queue[+T] private (private[this] var leading: List[T], private[this] var t
 object Queue {
   def apply[T](xs: T*) = new Queue[T](xs.toList, Nil)
 }
-
 
 object QueueOps extends App {
   val q1 = Queue(1, 2, 3)

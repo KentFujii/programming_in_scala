@@ -19,9 +19,15 @@ object BasicQueue {
 }
 
 object BasicQueueOps extends App {
-  val q = BasicQueue[Int]() enqueue 1 enqueue 2
-  println(q)
-  println(q.head)
-  println(q.tail)
-  println(q.tail.head)
+  val q1 = BasicQueue(1, 2, 3)
+  val q2 = q1.enqueue(4)
+
+  println(q1)
+  println(q2)
+
+  println(q1.head)
+  println(q2.head)
+
+  println(q1.tail)
+  println(q2.tail)
 }

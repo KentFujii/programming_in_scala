@@ -1,27 +1,33 @@
 package information_hiding
 
-class Queue4[T] private (private val leading: List[T], private val trailing: List[T]) {
+class CompanionObjectQueue[T] private (private val leading: List[T], private val trailing: List[T]) {
   private def mirror = {
-    if (leading.isEmpty) new Queue4(trailing.reverse, Nil)
+    if (leading.isEmpty) new CompanionObjectQueue(trailing.reverse, Nil)
     else this
   }
   def head = mirror.leading.head
   def tail = {
     val q = mirror
-    new Queue4(q.leading.tail, q.trailing)
+    new CompanionObjectQueue(q.leading.tail, q.trailing)
   }
-  def append(x: T) = new Queue4(leading, x :: trailing)
+  def enqueue(x: T) = new CompanionObjectQueue(leading, x :: trailing)
   override def toString() = (leading ::: trailing.reverse) mkString ("Queue(", ", ", ")")
 }
 
-object Queue4 {
-  def apply[T](xs: T*) = new Queue4[T](xs.toList, Nil)
+object CompanionObjectQueue {
+  def apply[T](xs: T*) = new CompanionObjectQueue[T](xs.toList, Nil)
 }
 
-object CompanionObject extends App {
-  val q = Queue4[Int]() append 1 append 2
-  println(q)
-  println(q.head)
-  println(q.tail)
-  println(q.tail.head)
+object CompanionObjectQueueOps extends App {
+  val q1 = CompanionObjectQueue(1, 2, 3)
+  val q2 = q1.enqueue(4)
+
+  println(q1)
+  println(q2)
+
+  println(q1.head)
+  println(q2.head)
+
+  println(q1.tail)
+  println(q2.tail)
 }
