@@ -6,8 +6,10 @@ class SlowAppendQueue[T](elems: List[T]) {
   def enqueue(x: T) = new SlowAppendQueue(elems ::: List(x))
 }
 
-object Queues1 extends App {
+object SlowAppendQueueOps extends App {
   val q = new SlowAppendQueue(Nil) enqueue 1 enqueue 2
+  println(q)
   println(q.head)
+  println(q.tail)
   println(q.tail.head)
 }

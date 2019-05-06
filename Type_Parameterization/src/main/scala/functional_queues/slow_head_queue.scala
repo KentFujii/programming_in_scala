@@ -6,8 +6,10 @@ class SlowHeadQueue[T](smele: List[T]) {
   def enqueue(x: T) = new SlowHeadQueue(x :: smele)
 }
 
-object Queues2 extends App {
+object SlowHeadQueueOps extends App {
   val q = new SlowHeadQueue(Nil) enqueue 1 enqueue 2
+  println(q)
   println(q.head)
+  println(q.tail)
   println(q.tail.head)
 }
